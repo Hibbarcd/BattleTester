@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {CardList} from './components/card-list/card-list.component'
-import enemies from "./testEnemies.json";
+import enemies from "./data/enemies/testEnemies.json";
 
 
 class App extends Component {
