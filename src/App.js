@@ -11,24 +11,38 @@ class App extends Component {
 
     this.state = {
       monsters: [],
-      searchfield: ''
+      randomField: ''
     }
   }
 
   componentDidMount(){
        this.setState({monsters: enemies})
-     }
+
+       function getRandomInt(max) {
+         const randomInt = Math.floor(Math.random() * Math.floor(max));
+         console.log(randomInt)
+       }
+       getRandomInt()
+
+       }
+
 
 render() {
+  const { monsters, randomField } = this.state
+
+  const randomizedMonster = monsters.filter(monster => 
+    monster.id.includes(randomField)
+  )
+
   return (
     <div className="App">
       <input 
         type='search' 
         placeholder="search monsters"
         // code below logs value of input from keyboard and console.logs it, but it has to be set as the 2nd parameter of the setState function because it is async.
-        onChange={e => this.setState({ searchfield: e.target.value }, () => console.log(this.state)) }/>
+        onChange={e => this.setState({ randomField: e.target.value }, () => console.log(this.state)) }/>
 
-    <CardList monsters={this.state.monsters} />
+    <CardList monsters={randomizedMonster} />
 
     </div>
 )
