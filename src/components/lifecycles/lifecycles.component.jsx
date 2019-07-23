@@ -25,8 +25,9 @@ class Lifecycles extends React.Component {
 
   render() {
     console.log('render!');
+    
     return (
-      <div className='lifecycles'
+      <div 
       style= {{
         backgroundColor: 'gray',
       }}
