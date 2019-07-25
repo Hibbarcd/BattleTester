@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {CardList} from './components/card-list/card-list.component'
 import enemies from "./data/enemies/testEnemies.json";
+import PartyCombatMenu from './components/partyCombatMenu/partyCombatMenu.component'
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ render() {
           backgroundColor: 'black',
         }}
     >
+    <PartyCombatMenu />
     <button                
           onClick={() =>  
                   this.setState(state => ({
