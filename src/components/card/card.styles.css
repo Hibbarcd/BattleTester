@@ -1,40 +1,35 @@
 .card-container {
-    display: flex;
-    width: 40vw;
+    display: inline-block;
+    width: 260px;
     height: 200px;
-    flex-direction: row;
+    flex-direction: column;
     background-color: black;
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 10px;
+    padding: 70px;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+    position: relative;
+    right: 5%;
   }
   
   .card-container:hover {
     transform: scale(1.05);
   }
   .image {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 260px;
+    max-height: 200px;
     overflow: hidden;
     position: relative;
-    left: 40%;
+    /* left: 30%; */
   }
 
   h2 {
     color: blanchedalmond;
     text-align: center;
-  }
-  p {
-    color: blanchedalmond;
-    font-size: 2.5em;
     position: relative;
-    padding-top: 100px;
-    padding-left: 15px;
-    margin: 50px auto;
-    right: 25%;
+    bottom: 0%;
   }
