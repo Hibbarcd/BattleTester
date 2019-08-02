@@ -4,6 +4,7 @@ import './App.css';
 import {CardList} from './components/card-list/card-list.component'
 import enemies from "./data/enemies/testEnemies.json";
 import PartyCombatMenu from './components/partyCombatMenu/partyCombatMenu.component'
+// import Enemy_Directory from './components/enemyDirectory/enemy-directory.component'
 
 
 class App extends Component {

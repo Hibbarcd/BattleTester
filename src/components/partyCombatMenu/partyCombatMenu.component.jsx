@@ -2,27 +2,44 @@ import React from 'react';
 // import store from '../../config/store'
 // import { connect } from 'react-redux'
 import './partyCombatMenu.style.scss'
+import CustomButton from '../customButton/customButton.component'
 
-function PartyCombatMenu(props)  {
+
+class PartyCombatMenu extends React.Component {
+  constructor(props) {
+      super(props)
+
+      this.state = {
+             fighting : true,
+             enemyStatus: 'alive',
+             partyStatus: 'alive',
+             attacking: false,
+             defending: true,
+      }
+  }
+  render() {
+
   return (         
     <div className='menu-container'>
-      <table className="commandsMenu">
-        <tbody id='commands'>
-        <tr id="fight">
-          <td>FIGHT</td>
-        </tr>
-        <tr id="spell">            
-          <td>SPELL</td>
-        </tr>
-        <tr id="run">
-          <td>RUN</td>
-        </tr>
-        <tr id="item">
-          <td>ITEM</td>
-        </tr>               
-      </tbody>
-    </table> 
+      <div className="commandsMenu">
+        <div id='commands'>
+        <CustomButton id="fight">
+          FIGHT
+        </CustomButton>
+        <CustomButton id="spell">            
+          SPELL
+        </CustomButton>
+        <CustomButton id="run">
+          RUN
+        </CustomButton>
+        <CustomButton id="item">
+          ITEM
+        </CustomButton>               
+      </div>
+    </div> 
     </div>
     )
+
+}
 }
 export default PartyCombatMenu
